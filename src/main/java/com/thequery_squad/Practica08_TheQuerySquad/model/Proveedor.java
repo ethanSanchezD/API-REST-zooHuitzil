@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.thequery_squad.model;
+package com.thequery_squad.Practica08_TheQuerySquad.model;
 
 import java.util.Date;
 import lombok.AllArgsConstructor;

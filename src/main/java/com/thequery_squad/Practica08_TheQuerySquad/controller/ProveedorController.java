@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.thequery_squad.controller;
+package com.thequery_squad.Practica08_TheQuerySquad.controller;
 
-import com.thequery_squad.model.Proveedor;
-import com.thequery_squad.service.ProveedorService;
+import com.thequery_squad.Practica08_TheQuerySquad.model.Proveedor;
+import com.thequery_squad.Practica08_TheQuerySquad.service.ProveedorService;
 import jakarta.annotation.Resource;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
