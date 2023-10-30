@@ -2,28 +2,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.thequery_squad.repository;
-import com.thequery_squad.model.Proveedor;
+package com.thequery_squad.Practica08_TheQuerySquad.service;
+
+import com.thequery_squad.Practica08_TheQuerySquad.model.Proveedor;
+import com.thequery_squad.Practica08_TheQuerySquad.repository.ProveedorRepository;
+import jakarta.annotation.Resource;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 
 /**
  *
  * @author ethan
  */
-@Repository
-public class ProveedorRepositoryImpl implements ProveedorRepository{
-      @Autowired
-       JdbcTemplate jdbcTemplate;
-    
+@Service
+public class ProveedorServiceImpl implements  ProveedorService{
+    @Resource
+    ProveedorRepository proveedorRep;
+
     @Override
     public List<Proveedor> findAll() {
-        
-        return jdbcTemplate.query("SELECT * FROm proveedor", new BeanPropertyRowMapper<Proveedor>(Proveedor.class));
+        return proveedorRep.findAll();
     }
 
     @Override
@@ -45,4 +44,5 @@ public class ProveedorRepositoryImpl implements ProveedorRepository{
     public void deleteOperador(Proveedor proveedor) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
 }
