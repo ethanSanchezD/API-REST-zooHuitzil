@@ -12,9 +12,11 @@ import java.util.List;
  * @author ethan
  */
 public interface ProveedorRepository {
-    List<Proveedor> findAll();
-    public void insertOperador(Proveedor proveedor);
-    public void updateOperador(Proveedor proveedor);
-    public void executeUpdateOperador(Proveedor proveedor);
-    public void deleteOperador(Proveedor proveedor);
+    public List<Proveedor> findAll();
+    public Proveedor getByRFC(String rfc);
+    public int insertProveedor(Proveedor proveedor);
+    public int updateOperador(Proveedor proveedor, String rfc);
+    public int executeUpdateProveedor(Proveedor proveedor);
+    public int deleteProveedor(Proveedor proveedor);
+    
 }

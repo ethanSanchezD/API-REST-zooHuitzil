@@ -24,25 +24,37 @@ public class ProveedorServiceImpl implements  ProveedorService{
     public List<Proveedor> findAll() {
         return proveedorRep.findAll();
     }
+    
+    @Override
+    public Proveedor getByRFC(String rfc) {
+        return proveedorRep.getByRFC(rfc);
+    }
 
     @Override
-    public void insertOperador(Proveedor proveedor) {
+    public int insertProveedor(Proveedor proveedor) {
+        return proveedorRep.insertProveedor(proveedor);
+    }
+
+    @Override
+    public int updateOperador(Proveedor proveedor,String rfc) {
+        return proveedorRep.updateOperador(proveedor,rfc);
+    }
+
+    @Override
+    public int executeUpdateProveedor(Proveedor proveedor) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void updateOperador(Proveedor proveedor) {
+    public int deleteProveedor(Proveedor proveedor) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
 
-    @Override
-    public void executeUpdateOperador(Proveedor proveedor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 
-    @Override
-    public void deleteOperador(Proveedor proveedor) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
+
+    
 
 }
