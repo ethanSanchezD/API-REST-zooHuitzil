@@ -4,13 +4,13 @@
  */
 package com.thequery_squad.Practica08_TheQuerySquad.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 /**
  *
  * @author ethan
@@ -21,20 +21,48 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Proveedor {
+    @JsonProperty("RFCProveedor")
+    private String RfCProveedor;
     
-    private String rfcproveedor;
-    private String nombre;
-    private String apellidopaterno;
-    private String apellidomaterno;
+    @JsonProperty("Nombre")
+    private String Nombre;
+    
+    @JsonProperty("ApellidoPaterno")
+    private String apellidoPaterno;
+    
+    @JsonProperty("ApellidoMaterno")
+    private String apellidoMaterno;
+    
+    @JsonProperty("Calle")
     private String calle;
-    private int numinterior;
-    private int numexterior;
+    
+    @JsonProperty("NumInterior")
+    private int numInterior;
+    
+    @JsonProperty("NumExterior")
+    private int numExterior;
+    
+    @JsonProperty("Colonia")
     private String colonia;
+    
+    @JsonProperty("Estado")
     private String estado;
-    private Date fechainiciocontrato;
-    private Date fechafincontrato;
-    private Date fechanacimiento;
+    
+    @JsonProperty("FechaInicioContrato")
+    private Date fechaIniciocontrato;
+    
+    @JsonProperty("FechaFinContrato")
+    private Date fechaFincontrato;
+    
+    @JsonProperty("FechaNacimiento")
+    private Date fechaNacimiento;
+    
+    @JsonProperty("Genero")
     private String genero;
-    private int frecuenciaservicio;
-    private int costoservcio;
+    
+    @JsonProperty("FrecuenciaServicio")
+    private int frecuenciaServicio;
+    
+    @JsonProperty("CostoServicio")
+    private int costoServcio;
 }
