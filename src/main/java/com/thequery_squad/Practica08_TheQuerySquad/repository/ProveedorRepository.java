@@ -8,7 +8,7 @@ import com.thequery_squad.Practica08_TheQuerySquad.model.Proveedor;
 import java.util.List;
 
 /**
- *
+ * Interfaz que indica que Spring va a usar de informacion
  * @author ethan
  */
 public interface ProveedorRepository {
@@ -16,7 +16,6 @@ public interface ProveedorRepository {
     public Proveedor getByRFC(String rfc);
     public int insertProveedor(Proveedor proveedor);
     public int updateOperador(Proveedor proveedor, String rfc);
-    public int executeUpdateProveedor(Proveedor proveedor);
-    public int deleteProveedor(Proveedor proveedor);
+    public int deleteProveedor(String rfc);
     
 }
