@@ -8,21 +8,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 /**
- *
+ * Clase Proveedor que vamos a usar en nuestra arquitectura MVC, donde esta clase representa 
+ * el modelo de la aplicacion
+ * 
+ * Se usan anotaciones de la dependecia de Lombok como:
+ * @Data que es una anotacion que Lombok provee para que la clase contenga ToString, Getters 
+ * y Setters, asi como un constructor con los atributos minimos requeridos para
+ * la instancia de la clase.
+ * 
+ * @AllArgsConstructor Que es una anotacion que nos provee un constructor con todos los atributps 
+ * de la clase
+ * 
+ * @NoArgsConstructor ANotacion que nos provee un constructor sin atributos
+ * 
+ * Ademas, se hace uso de la anotacion 
+ * @JsonProperty la cual se usa para que Spring sepa que en las peticiones http,
+ * el nombre del atributo en el cuerpo del JSON es el que le indicamos como argumento en la anotacion
+ * por ejemplo para el atributo de apellidoPaterno, le indicamos a spring que en el cuerpo 
+ * del JSON de la peticion http, el nombre del atributo esta escrito como ApellidoPaterno
  * @author ethan
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 public class Proveedor {
+    
+    
+    
     @JsonProperty("RFCProveedor")
-    private String RfCProveedor;
+    private String RFCProveedor;
     
     @JsonProperty("Nombre")
     private String Nombre;
