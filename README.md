@@ -68,7 +68,8 @@
 Esta Api-Rest es un proyecto escolar cuyo proposito es implementar un CRUD de dos tablas provenientes de una base de datos realizada en PostGreSQL.
 
 
-![image](https://github.com/ethanSanchezD/API-REST-zooHuitzil/assets/129548925/0591dc51-de63-44e8-809c-3d9bd7d00796)
+![image](https://github.com/ethanSanchezD/API-REST-zooHuitzil/assets/129548925/95c99566-5400-45c5-9fdb-8f4b880374ea)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -79,7 +80,7 @@ Esta Api-Rest es un proyecto escolar cuyo proposito es implementar un CRUD de do
 
 [![Java][Java.com]][Java-url]
 [![SpringBoot][Spring.io]][Spring-Boot-url]
-[![PostGreSQL][Postgres.org][Postgres-url]]
+[![PostGreSQL][Postgres.org]][Postgres-url]
 [![Maven][Maven.org]][Maven-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
