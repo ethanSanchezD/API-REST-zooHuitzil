@@ -91,8 +91,7 @@ Esta Api-Rest es un proyecto escolar cuyo proposito es implementar un CRUD de do
 ## Manos a la obra
 
 ### Prerequisitos
-
-* Para correr este proyecto, es necesario:
+Para correr este proyecto, es necesario:
 
 #### Base de Datos
 Este proyecto usa PostGreSQL como sistema manejador de bases de datos, además, para conectarse de manera exitosa a la base de datos, es necesaria la siguiente configuracion
@@ -124,7 +123,7 @@ Para la realizacion del proyecto se utilizó el IDE de APache Neatbeans, por lo 
 
 2. Abre el proyecto en el IDE
 
-3. Correr la clase principal Practica08TheQuerySquadApplication.java
+3. Correr la clase principal Practica08TheQuerySquadApplication.java en la carpeta src/main/java/com/thequery_squad/Practica08_TheQuerySquad
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
