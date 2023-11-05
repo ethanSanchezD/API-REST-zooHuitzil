@@ -141,7 +141,7 @@ En este proyecto se realizo el CRUD de dos tablas: Proveedor y [Otra tabla] sin 
   * Eliminar un pbjeto de la tabla
 **Algunos ejemplos:**
 
-#### Obtener toda linformacion
+#### Obtener toda la informacion de la tabla
 
 https://github.com/ethanSanchezD/API-REST-zooHuitzil/assets/129548925/a11dfee3-e2e8-487f-9f85-06e70fddc2d5
 
