@@ -56,7 +56,7 @@
       </ul>
     </li>
     <li><a href="#ejemplos-de-uso">Ejemplos de Uso</a></li>
-    <li><a href="#documentacion-del-proyecto">Documentacion del Proyecto</a></li>
+    <li><a href="#documentacion-de-la-api">Documentacion de la API</a></li>
   </ol>
 </details>
 
@@ -95,115 +95,67 @@ Esta Api-Rest es un proyecto escolar cuyo proposito es implementar un CRUD de do
 * Para correr este proyecto, es necesario:
 
 #### Base de Datos
-Este proyecto usa PostGreSQL como sistema manejador de bases de datos, además, para conectarse de manera exitosa a la base de datos, es necesaria la siguiente configuracion, aunque si se desea 
-* Tener una base de datos llamada "zooHuitzil" de forma local en el puerto 5432, es decir, tener una base de datos en la siguiente ruta: jdbc:postgresql://localhost:5432/zooHuitzil
-* Nombre de usuario: postgres
-* Contraseña: 1234
+Este proyecto usa PostGreSQL como sistema manejador de bases de datos, además, para conectarse de manera exitosa a la base de datos, es necesaria la siguiente configuracion
+* Tener una base de datos llamada "zooHuitzil" de forma local en el puerto 5432, es decir, tener una base de datos en la siguiente ruta:
+  *localhost:5432/zooHuitzil*
+* **Nombre de usuario:** postgres
+* **Contraseña:** 1234
+* El DDL y DML de la base de datos se encuentra en el proyecti rpincipal, en la siguiente ruta: [proyecto principal](//github.com/ethanSanchezD/Practica08_TheQuery-Squad/tree/main/SQL) 
  
 #### PostMan 
-To run this proyect, it is necessary to have Apache Maven at least 3.8.8 version installed, but it is strongly recommended to use the latest release version.
-In case you need to install Maven, go to the oficial installation page.
+Para hacer las pruebas de las rutas HTTP de la API-Rest, usamos PostMan como herramienta para realizarlas:
 
-* [Download Apache Maven](https://maven.apache.org/download.cgi)
-* [Install Apache Maven](https://maven.apache.org/install.html)
-### Installation
+* [Descargar/Instalar PostMan](https://www.postman.com/downloads/)
+
+#### IDE Apache Neatbeans
+Para la realizacion del proyecto se utilizó el IDE de APache Neatbeans, por lo que, para una mejor visualización y accesibilidad, es recomendable usar este IDE para correr la aplicacion
+<a>
+### Instalacion
 
 
-1. Clone the repo
+1. Clona el repositorio 
    ```sh
-   git clone https://github.com/ethanSanchezD/Java-Converter.git
+   git clone https://github.com/ethanSanchezD/API-REST-zooHuitzil.git
    ```
 
 
 
-#### Via commands:
+#### En ApacheNeatbeans:
 
-2. Move to repository folder
+2. Abre el proyecto en el IDE
 
-3. Build proyect
-   ```sh
-   mvn package
-   ```
-   or
-    ```sh
-   mvn clean package
-   ```
-5. Run Maven project
-   ```sh
-   java -jar target/JavaConverter-0.0.1-SNAPSHOT.jar
-   ```
-#### Via IDE (In this example: VS Code)
-2. Open the cloned folder in the IDE
-3. Run Main class
-
-
-
-
-https://github.com/ethanSanchezD/Java-Converter/assets/129548925/8663b14a-b599-4436-b5ee-d214f07f814d
-
-
-   
-
-
-
+3. Correr la clase principal Practica08TheQuerySquadApplication.java
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 
 <!-- USAGE EXAMPLES -->
-## Usage Examples
+## Ejemplos de uso 
 
-This project uses a limited currency and measurement units:
+En este proyecto se realizo el CRUD de dos tablas: Proveedor y [Otra tabla] sin embargo en cada tabla es posible hacer las operaciones:
 
-* Currency Converter
-  * Mexican Peso
-  * US Dollar
-  * Euro
-  * British Pound
-  * Japanese Yen
-  * South Korean Won   
+  * Listar toda la informacion de la tabla 
+  * Obtener informacion de un dato en la tabla dado un id
+  * Insertar un nuevo objeto a la tabla
+  * Actualizar un objeto en la tabla 
+  * Eliminar un pbjeto de la tabla
+**Algunos ejemplos:**
 
+#### Obtener toda linformacion
 
-![Currency-video_1](https://github.com/ethanSanchezD/Java-Converter/assets/129548925/faa7c108-ec99-44b6-980b-ee324ccc6a44)
+https://github.com/ethanSanchezD/API-REST-zooHuitzil/assets/129548925/a11dfee3-e2e8-487f-9f85-06e70fddc2d5
 
-
-
-
-* Temperature Converter
-  * Celsius
-  * Fharenheit
-  * Kelvins   
-
-![Temperature-video](https://github.com/ethanSanchezD/Java-Converter/assets/129548925/85d50224-61f5-4774-af15-06c3efa90041)
-
-
-
-* Weight Converter
-  * Kilograms
-  * Grams
-  * Pounds 
-
-![Weight-video](https://github.com/ethanSanchezD/Java-Converter/assets/129548925/556d9c1f-8405-4137-a216-f3ff2dfc29d6)
-
-
-* Measure Converter
-  * Meter
-  * Kilometer
-  * Mile
-  * Foot
-
-
-![Measure-converter](https://github.com/ethanSanchezD/Java-Converter/assets/129548925/da328faa-f6d9-4894-bd41-9c64e017ee47)
+#### Obtener objeto dado su id
 
 
 
 
-* Error Managment
-  * Different type of wrong inputs was handled as input errors
-  
-![error-managment](https://github.com/ethanSanchezD/Java-Converter/assets/129548925/8457a443-1ccd-40bf-839a-5ca09cdbe68e)
+https://github.com/ethanSanchezD/API-REST-zooHuitzil/assets/129548925/879b59e3-a1ea-44bd-8dca-d31472b1c0e8
 
+#### Eliminar un objeto dado su id
+
+https://github.com/ethanSanchezD/API-REST-zooHuitzil/assets/129548925/5f44b57d-6a02-413c-a660-54e750203856
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -212,23 +164,12 @@ This project uses a limited currency and measurement units:
 
 
 
-<!-- CONTACT -->
-## Contact
+## Documentacion de la API
 
-Email - ethand.san@gmail.com
+Consideramos que es importante que al realizar una API-RESt, una buena práctica sería documentarla, es por eso que, mediante la herramienta de Swagger, se realizó esta tarea. Esta herramienta nos proporciona un interfaz gráfica en la que podemos observar cada método CRUD que se puede realizar. 
+Para poder observar esta interfaz, es importante que se hayan seguido los pasos en <a href="#instalacion">Instalacion</a>. Una vez realizado esos pasos, podemos visitar la siguiente direccion para poder visualizar la documentación de la API:
+[Vizualicacion](http://localhost:8080/swagger-ui/index.html)
 
-Project Link: [https://github.com/ethanSanchezD/Java-Converter](https://github.com/ethanSanchezD/Java-Converter)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* Thanks to [Alura-Latam](https://www.aluracursos.com/?gclid=CjwKCAjwtuOlBhBREiwA7agf1rdySFIHX-ybAQ678Q779VPf4w5GhYMG21A5x9yPvKdORnMzIWK3DBoC6UAQAvD_BwE)
-  and [Oracle](https://www.oracle.com/mx/) for give me the oportunity of being part of [Oracle Next Education](https://www.oracle.com/mx/education/oracle-next-education/) and make this project posible.
-* [API used in Currency Converter](https://exchangerate.host/#/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
