@@ -92,7 +92,7 @@ public class ProveedorController {
      */
     @PutMapping("/proveedor/{rfc}")
     public String updateProveedor(@RequestBody Proveedor proveedor, @PathVariable(name = "rfc") String rfc){
-        return "Numero de filas actualizadas: " + proveedorService.updateOperador(proveedor,rfc);
+        return "Numero de filas actualizadas: " + proveedorService.updateProveedor(proveedor,rfc);
         
     }
     

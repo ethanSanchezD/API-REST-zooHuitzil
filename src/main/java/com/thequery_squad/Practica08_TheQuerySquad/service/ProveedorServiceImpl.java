@@ -65,8 +65,8 @@ public class ProveedorServiceImpl implements  ProveedorService{
      * @return Numero de filas afectadas por el query
      */
     @Override
-    public int updateOperador(Proveedor proveedor,String rfc) {
-        return proveedorRep.updateOperador(proveedor,rfc);
+    public int updateProveedor(Proveedor proveedor,String rfc) {
+        return proveedorRep.updateProveedor(proveedor,rfc);
     }
 
    
