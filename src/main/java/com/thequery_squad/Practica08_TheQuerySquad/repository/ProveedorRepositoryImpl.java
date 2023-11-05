@@ -79,7 +79,7 @@ public class ProveedorRepositoryImpl implements ProveedorRepository{
                         + "FrecuenciaServicio,"
                         + "CostoServicio) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
                 , new Object[] {
-                    proveedor.getRfCProveedor(),
+                    proveedor.getRFCProveedor(),
                     proveedor.getNombre(),
                     proveedor.getApellidoPaterno(),
                     proveedor.getApellidoMaterno(),
