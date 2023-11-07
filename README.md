@@ -167,7 +167,11 @@ https://github.com/ethanSanchezD/API-REST-zooHuitzil/assets/129548925/5f44b57d-6
 
 Consideramos que es importante que al realizar una API-RESt, una buena práctica sería documentarla, es por eso que, mediante la herramienta de Swagger, se realizó esta tarea. Esta herramienta nos proporciona un interfaz gráfica en la que podemos observar cada método CRUD que se puede realizar. 
 Para poder observar esta interfaz, es importante que se hayan seguido los pasos en <a href="#instalacion">Instalacion</a>. Una vez realizado esos pasos, podemos visitar la siguiente direccion para poder visualizar la documentación de la API:
-[Vizualicacion](http://localhost:8080/swagger-ui/index.html)
+[Visualización](http://localhost:8080/swagger-ui/index.html)
+
+Al abrirlo, deberia aparecer una ventana como la que sigue: 
+<img width="948" alt="image" src="https://github.com/ethanSanchezD/API-REST-zooHuitzil/assets/129548925/08be624a-38f2-41ee-b22a-53459cc01802">
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
