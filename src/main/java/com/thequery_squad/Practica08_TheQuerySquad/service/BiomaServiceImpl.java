@@ -8,10 +8,12 @@ import com.thequery_squad.Practica08_TheQuerySquad.model.Bioma;
 import com.thequery_squad.Practica08_TheQuerySquad.repository.BiomaRepository;
 import jakarta.annotation.Resource;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  * Clase que implementa los metodos que se usaran en la logica de negocios de la API
  */
+@Service
 public class BiomaServiceImpl implements BiomaService {
     
     /**
