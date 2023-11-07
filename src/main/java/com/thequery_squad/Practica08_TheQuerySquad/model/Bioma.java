@@ -5,6 +5,8 @@
 package com.thequery_squad.Practica08_TheQuerySquad.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,11 +35,15 @@ import lombok.NoArgsConstructor;
 public class Bioma {
     
     @JsonProperty("IDBioma")
+    @Schema(name = "IDBioma", example = "1002", requiredMode = Schema.RequiredMode.REQUIRED)
     private int IDBioma;
     
+    @Schema(name = "TipoBioma", example = "desierto", requiredMode = Schema.RequiredMode.REQUIRED)
     @JsonProperty("TipoBioma")
     private String TipoBioma;
     
+    
     @JsonProperty("CantidadJaulas")
+    @Schema(name = "CantidadJaulas", example = "10", requiredMode = Schema.RequiredMode.REQUIRED)
     private int CantidadJaulas;
 }

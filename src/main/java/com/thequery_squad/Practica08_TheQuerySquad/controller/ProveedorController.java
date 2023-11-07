@@ -34,6 +34,9 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @RequestMapping Es la anotacion que usa Spring para que el http raiz se
  * ejecute en localhost::8080/zooHuitzil
+ * 
+ * @Operation Es una anotacionque se encuentra en varios metodos
+ *  Sirve para que la aplicacion de swagger pueda realizar la documentacion que nosotros le especificamos
  * @author ethan
  */
 @RestController
@@ -52,7 +55,7 @@ public class ProveedorController {
      * Metodo que lista todos los proveedores Tiene la anotacion
      *
      * @GetMapping("/proveedor") que va a ser el http donde va a estar esta
-     * peticion de tipo GET
+     * peticion de tipo GET 
      *
      * @return Una lista de todos los proveedores
      */
@@ -62,11 +65,7 @@ public class ProveedorController {
             responses = {
                 @ApiResponse(
                         description = "Success",
-                        responseCode = "200",
-                        content = {
-                            @Content(
-                                    mediaType = "Proveedor/json",
-                                    array = @ArraySchema(schema = @Schema(implementation = Proveedor.class)))}
+                        responseCode = "200"
                 )}
     )
     @GetMapping("/proveedor")
@@ -92,16 +91,7 @@ public class ProveedorController {
                 @ApiResponse(
                         description = "Success",
                         responseCode = "200"
-                )},
-            parameters = {
-                @Parameter(
-                        name = "RFC",
-                        description = "RFC del Proveedor",
-                        in = ParameterIn.PATH,
-                        required = true,
-                        example = "UEBR662373EQZ"
-                )
-            }
+                )}
     )
 
     @GetMapping("/proveedor/{rfc}")
@@ -126,15 +116,13 @@ public class ProveedorController {
             responses = {
                 @ApiResponse(
                         description = "Success",
-                        responseCode = "200",
-                        content = @Content(mediaType = "String",examples = {
-                    @ExampleObject(value = "Numero de filas actualizadas: 1")})
+                        responseCode = "200"
                 )}
     )
 
     @PostMapping("/proveedor")
     public String saveProveedor(@RequestBody Proveedor proveedor) {
-        return "Numero de filas afectadas: " + proveedorService.insertProveedor(proveedor);
+        return "Numero de filas insertadas: " + proveedorService.insertProveedor(proveedor);
     }
 
     /**
@@ -150,19 +138,18 @@ public class ProveedorController {
      */
 
     @Operation(
-            description = "Actualiza la informacion de un Proveedor de la base de datos dada la nueva informacio",
-            summary = "Actualiza la informacion de un Proveedor",
+            description = "Actualiza la informacion de un Proveedor de la base de datos dada la nueva informacion y su RFC",
+            summary = "Actualiza la informacion de un Proveedor dado su RFC",
             responses = {
                 @ApiResponse(
                         description = "Success",
-                        responseCode = "200",
-                        content = @Content(mediaType = "String",examples = {
-                    @ExampleObject(value = "Numero de filas actualizadas: 1")})
+                        responseCode = "200"
                 )}
     )
-    @PutMapping("/proveedor")
-    public String updateProveedor(@RequestBody Proveedor proveedor) {
-        return "Numero de filas actualizadas: " + proveedorService.updateOperador(proveedor);
+    @PutMapping("/proveedor/{rfc}")
+    public String updateProveedor(@RequestBody Proveedor proveedor
+            ,@PathVariable(name="rfc") String rfc) {
+        return "Numero de filas actualizadas: " + proveedorService.updateProveedor(proveedor,rfc);
 
     }
 
@@ -180,19 +167,7 @@ public class ProveedorController {
             responses = {
                 @ApiResponse(
                         description = "Success",
-                        responseCode = "200",
-                        content = @Content(mediaType = "String",examples = {
-                    @ExampleObject(value = "Numero de filas actualizadas: 1")})
-                )},
-            parameters = {
-                @Parameter(
-                        name = "RFC",
-                        description = "RFC del Proveedor",
-                        in = ParameterIn.PATH,
-                        required = true,
-                        example = "UEBR662373EQZ"
-                )
-            }
+                        responseCode = "200")}
     )
     @DeleteMapping("/proveedor/{rfc}")
     public String deleteProveedorByRFC(@PathVariable(name = "rfc") String rfc) {
