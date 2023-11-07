@@ -148,6 +148,7 @@ public class ProveedorController {
      * @param rfc El RFC del proveedor a actualizar
      * @return El numero de filas afectadas por la peticion
      */
+
     @Operation(
             description = "Actualiza la informacion de un Proveedor de la base de datos dada la nueva informacio",
             summary = "Actualiza la informacion de un Proveedor",
