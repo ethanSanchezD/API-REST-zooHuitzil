@@ -66,8 +66,8 @@ public class ProveedorServiceImpl implements  ProveedorService{
      */
     @Override
 
-    public int updateProveedor(Proveedor proveedor) {
-        return proveedorRep.updateOperador(proveedor);
+    public int updateProveedor(Proveedor proveedor, String rfc) {
+        return proveedorRep.updateProveedor(proveedor,rfc);
 
     }
 

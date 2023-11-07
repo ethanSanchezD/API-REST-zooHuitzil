@@ -50,7 +50,7 @@ public class BiomaRepositoryImpl implements BiomaRepository {
      */
     @Override
     public int updateBioma(Bioma bioma, int IDBioma) {
-        return jdbcTemplate.update("UPDATE Bioma SET IDBioma=?, TipoBioma=?, CantidadJaulas=? WHERE IDBioma=?", new Object[] {IDBioma, bioma.getTipoBioma(), bioma.getCantidadJaulas()});
+        return jdbcTemplate.update("UPDATE Bioma SET TipoBioma=?, CantidadJaulas=? WHERE IDBioma=?", new Object[] {bioma.getTipoBioma(), bioma.getCantidadJaulas(),IDBioma});
     }
 
     /**

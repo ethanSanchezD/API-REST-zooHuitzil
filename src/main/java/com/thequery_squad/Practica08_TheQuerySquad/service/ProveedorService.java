@@ -16,7 +16,7 @@ public interface ProveedorService {
     public Proveedor getByRFC(String rfc);
     public int insertProveedor(Proveedor proveedor);
 
-    public int updateProveedor(Proveedor proveedor);
+    public int updateProveedor(Proveedor proveedor, String rfc);
 
     public int deleteProveedor(String rfc);
 

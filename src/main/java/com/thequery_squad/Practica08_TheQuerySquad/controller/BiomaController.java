@@ -5,11 +5,12 @@
 package com.thequery_squad.Practica08_TheQuerySquad.controller;
 
 import com.thequery_squad.Practica08_TheQuerySquad.model.Bioma;
-import com.thequery_squad.Practica08_TheQuerySquad.repository.BiomaRepository;
 import com.thequery_squad.Practica08_TheQuerySquad.service.BiomaService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,6 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/zooHuitzil")
+@Tag(name = "Bioma")
 public class BiomaController {
     
     /**
@@ -44,6 +46,16 @@ public class BiomaController {
      * esta peticion de tipo GET
      * @return Una lista de todos los biomas
      */
+    
+    @Operation(
+            description = "Obtiene una lista de toda la informacion de la tabla Bioma de la base de datos",
+            summary = "Una lista con la informacion de la tabla Bioma",
+            responses = {
+                @ApiResponse(
+                        description = "Success",
+                        responseCode = "200"
+                )}
+    )
     @GetMapping("/bioma")
     public List<Bioma> getBiomas(){
         return biomaService.getAll();
@@ -59,6 +71,16 @@ public class BiomaController {
      * @param IDBioma El ID del bioma que queremos obtener
      * @return Una lista de todos los biomas
      */
+    @Operation(
+            description = "Obtiene toda la informacion de un Bioma de la base de datos dado un ID",
+            summary = "Devuelve la informacion de un bioma dado su ID",
+            responses = {
+                @ApiResponse(
+                        description = "Success",
+                        responseCode = "200"
+                )}
+    )
+
     @GetMapping("/bioma/{idbioma}")
     public Bioma getBiomaById(@PathVariable(name="idbioma") int IDBioma){
         return biomaService.getByID(IDBioma);
@@ -74,9 +96,18 @@ public class BiomaController {
      * @param bioma El proveedor que queremos insertar a la base de datos
      * @return El numero de filas afectadas por la peticion
      */
+    @Operation(
+            description = "Inserta un nuevo Bioma en la base de datos dada su informacio",
+            summary = "Inserta la informacion de un Bioma",
+            responses = {
+                @ApiResponse(
+                        description = "Success",
+                        responseCode = "200"
+                )}
+    )
     @PostMapping("/bioma")
     public String saveBioma(@RequestBody Bioma bioma){
-        return "No. de filas afectadas: " + biomaService.insertBioma(bioma);
+        return "No. de filas insertadas: " + biomaService.insertBioma(bioma);
     }
     
     /**
@@ -89,6 +120,15 @@ public class BiomaController {
      * @param IDBioma El ID del bioma a actualizar 
      * @return El numero de filas afectadas por la peticion 
      */
+    @Operation(
+            description = "Actualiza la informacion de un Bioma de la base de datos dada la nueva informacion dado su ID",
+            summary = "Actualiza la informacion de un Bioma dado su ID",
+            responses = {
+                @ApiResponse(
+                        description = "Success",
+                        responseCode = "200"
+                )}
+    )
     @PutMapping("/bioma/{idbioma}")
     public String updateBioma(@RequestBody Bioma bioma, @PathVariable(name="idbioma") int IDBioma){
         return "Numero de filas actualizadas: " + biomaService.updateBioma(bioma, IDBioma);
@@ -102,8 +142,16 @@ public class BiomaController {
      * @param IDBioma El ID del bioma a eliminar 
      * @return El numero de filas afectadas por la peticion
      */
+    @Operation(
+            description = "Elimina toda la informacion de un Bioma de la base de datos dado un ID",
+            summary = "Elimina la informacion de un bioma dado su ID",
+            responses = {
+                @ApiResponse(
+                        description = "Success",
+                        responseCode = "200")}
+    )
     @DeleteMapping("/bioma/{idbioma}")
     public String deleteBiomaById(@PathVariable(name="idbioma") int IDBioma){
-        return biomaService.deleteBioma(IDBioma)+"No. of rows deleted from the database";
+        return "No. de filas eliminadas" + biomaService.deleteBioma(IDBioma);
     }
 }
