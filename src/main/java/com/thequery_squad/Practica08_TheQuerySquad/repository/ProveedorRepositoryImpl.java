@@ -105,7 +105,9 @@ public class ProveedorRepositoryImpl implements ProveedorRepository{
      * @return Numero de filas afectadas por el query
      */
     @Override
-    public int updateProveedor(Proveedor proveedor, String rfc) {
+
+    public int updateProveedor(Proveedor proveedor) {
+
         return jdbcTemplate.update("UPDATE proveedor SET "
                 + "Nombre = ?, "
                 + "ApellidoPaterno = ?, "
@@ -135,7 +137,7 @@ public class ProveedorRepositoryImpl implements ProveedorRepository{
                     proveedor.getGenero(),
                     proveedor.getFrecuenciaServicio(),
                     proveedor.getCostoServcio(),
-                    rfc});
+                    proveedor.getRFCProveedor()});
     }
 
 
