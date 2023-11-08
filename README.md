@@ -106,6 +106,17 @@ Para hacer las pruebas de las rutas HTTP de la API-Rest, usamos PostMan como her
 
 * [Descargar/Instalar PostMan](https://www.postman.com/downloads/)
 
+Proveemos de las peticiones HTTP que usamos en PostMan, para descargarlo, abre el link para:
+* [Bioma](https://drive.google.com/file/d/15yybwBsG7v3c5uoqDMrK7AikPCWvqpI7/view?usp=drive_link)
+* [Proveedor](https://drive.google.com/file/d/1w2pe7FMv5FQ2xmaTVdpxaCPmDXP6Eiel/view?usp=sharing)
+
+Despues de descargar los archivos .json, al abrir la aplicación de PostMan, se pueden importar las colecciones de peticiones dandole click al boton de "Importar"
+
+<img width="284" alt="image" src="https://github.com/ethanSanchezD/API-REST-zooHuitzil/assets/129548925/5c7837f3-8aee-4f8c-b9e8-1241fee95487">
+<br>
+<img width="479" alt="image" src="https://github.com/ethanSanchezD/API-REST-zooHuitzil/assets/129548925/5b8f2928-d83b-4730-974a-a5c9ed0b0865">
+
+
 #### IDE Apache Neatbeans
 Para la realizacion del proyecto se utilizó el IDE de APache Neatbeans, por lo que, para una mejor visualización y accesibilidad, es recomendable usar este IDE para correr la aplicacion
 <a>
@@ -132,7 +143,7 @@ Para la realizacion del proyecto se utilizó el IDE de APache Neatbeans, por lo 
 <!-- USAGE EXAMPLES -->
 ## Ejemplos de uso 
 
-En este proyecto se realizo el CRUD de dos tablas: Proveedor y [Otra tabla] sin embargo en cada tabla es posible hacer las operaciones:
+En este proyecto se realizo el CRUD de dos tablas: Proveedor y Bioma sin embargo en cada tabla es posible hacer las operaciones:
 
   * Listar toda la informacion de la tabla 
   * Obtener informacion de un dato en la tabla dado un id
